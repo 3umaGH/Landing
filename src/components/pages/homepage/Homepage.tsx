@@ -38,6 +38,7 @@ export const Homepage = () => {
         <Box
           component={"img"}
           src="https://i.gyazo.com/a88cca4db086478cbf3a74d81c785942.jpg"
+          alt="Office Enviroment"
           sx={{
             width: "100%",
             height: "auto",

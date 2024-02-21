@@ -23,6 +23,7 @@ export const ContactSection = () => {
     >
       <Typography
         variant="h4"
+        component={"p"}
         sx={{
           typography: { xs: "h6", md: "h4" },
           fontWeight: "600",

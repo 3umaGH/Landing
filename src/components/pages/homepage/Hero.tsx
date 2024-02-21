@@ -23,7 +23,7 @@ export const Hero = ({
         style={{ fontWeight: 600 }}
       >
         Landing template for{" "}
-        <span style={{ color: theme.palette.primary.dark }}>startups</span>
+        <span style={{ color: theme.palette.primary.light }}>startups</span>
       </Typography>
 
       <Typography
