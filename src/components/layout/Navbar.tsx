@@ -1,6 +1,7 @@
 import { useTheme } from "@emotion/react";
-import { Box, Button, Link, Typography } from "@mui/material";
+import { Box, Button, Divider, Link, Typography } from "@mui/material";
 import { LOGO_URL } from "../../constants";
+import { ThemeModeButton } from "../common/ThemeModeButton";
 
 export const Navbar = () => {
   const theme = useTheme();
@@ -41,6 +42,9 @@ export const Navbar = () => {
           <Button variant="contained" size="large" sx={{ px: 4 }}>
             Sign Up
           </Button>
+
+          <Divider orientation="vertical" variant="fullWidth" flexItem />
+          <ThemeModeButton currentMode={theme.palette.mode} />
         </Box>
       </Box>
     </nav>

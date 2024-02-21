@@ -1,7 +1,7 @@
-import { CssBaseline, ThemeProvider } from "@mui/material";
+import { CssBaseline, ThemeProvider, useMediaQuery } from "@mui/material";
 import { ThemeModeContext } from "./context/ThemeModeContext";
 import { createTheme } from "@mui/material";
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { Homepage } from "./components/pages/homepage/Homepage";
 import { Layout } from "./components/layout/Layout";
 
@@ -11,11 +11,22 @@ import "@fontsource/roboto/500.css";
 import "@fontsource/roboto/700.css";
 
 function App() {
-  const [mode, setMode] = useState<"light" | "dark">("light");
+  const prefersDarkMode = useMediaQuery("(prefers-color-scheme: dark)");
+  const [mode, setMode] = useState<"light" | "dark">("dark");
 
   const toggleThemeMode = () => {
     setMode((prevMode) => (prevMode === "light" ? "dark" : "light"));
   };
+
+  useEffect(() => {
+    setMode(prefersDarkMode ? "dark" : "light");
+  }, [prefersDarkMode]);
+
+  /*Disable transitions on first render to prevent theme flickering */
+  useEffect(() => {
+    document.body.classList.add("no-transition");
+    setTimeout(() => document.body.classList.remove("no-transition"), 200);
+  }, []);
 
   const theme = useMemo(
     () =>

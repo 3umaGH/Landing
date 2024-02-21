@@ -1,8 +1,22 @@
 * {
   transition:
-    background-color 300ms linear,
-    opacity 300ms,
+    background-color 100ms linear,
+    opacity 100ms,
     color 10ms ease;
+}
+
+.no-transition {
+  transition: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    transition: none;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }
 
 ul#footer-menu li {
@@ -14,7 +28,8 @@ li {
   margin-right: 5px;
 }
 
-a,li {
+a,
+li {
   transition: color 300ms ease-in-out;
 }
 
