@@ -1,5 +1,6 @@
 import { useTheme } from "@emotion/react";
 import { Box, Button, Link, Typography } from "@mui/material";
+import { LOGO_URL } from "../../constants";
 
 export const Navbar = () => {
   const theme = useTheme();
@@ -11,13 +12,13 @@ export const Navbar = () => {
           display: "flex",
           flexDirection: { xs: "column", sm: "row" },
           justifyContent: "space-between",
-          alignItems: { xs: "center", sm: "start" },
+          alignItems: "center",
           gap: 4,
         }}
       >
         <Box
           component={"img"}
-          src="https://cdn.worldvectorlogo.com/logos/blue-1.svg"
+          src={LOGO_URL}
           sx={{
             height: { xs: 120, sm: 70 },
             width: { xs: 120, sm: 70 },

@@ -3,6 +3,7 @@ import { Box, Link, Typography } from "@mui/material";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import { useMemo } from "react";
+import { LOGO_URL } from "../../constants";
 
 export const Footer = () => {
   const theme = useTheme();
@@ -45,7 +46,7 @@ export const Footer = () => {
         >
           <Box
             component={"img"}
-            src="https://cdn.worldvectorlogo.com/logos/blue-1.svg"
+            src={LOGO_URL}
             sx={{
               height: 35,
               width: 35,
