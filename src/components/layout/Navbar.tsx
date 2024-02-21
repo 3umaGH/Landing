@@ -44,8 +44,20 @@ export const Navbar = () => {
             Sign Up
           </Button>
 
-          <Divider orientation="vertical" variant="fullWidth" flexItem />
-          <ThemeModeButton currentMode={theme.palette.mode} />
+          <Divider
+            sx={{ display: { xs: "none", sm: "block" } }}
+            orientation="vertical"
+            variant="fullWidth"
+            flexItem
+          />
+          <ThemeModeButton
+            sx={{
+              top: 0,
+              right: 0,
+              position: { xs: "absolute", sm: "static" },
+            }}
+            currentMode={theme.palette.mode}
+          />
         </Box>
       </Box>
     </nav>
