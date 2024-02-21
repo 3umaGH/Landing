@@ -22,8 +22,8 @@ export const Navbar = () => {
           src={LOGO_URL}
           alt="Logo"
           sx={{
-            height: { xs: 120, sm: 70 },
-            width: { xs: 120, sm: 70 },
+            height: { xs: 100, sm: 70 },
+            width: { xs: 100, sm: 70 },
           }}
         />
 
