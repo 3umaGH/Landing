@@ -60,6 +60,9 @@ export const Hero = ({
           variant="outlined"
           sx={{ px: 4, py: 1.5, letterSpacing: ".1rem", minWidth: "220px" }}
           color="secondary"
+          href="https://github.com/3umaGH/Landing"
+          rel="noopener noreferrer"
+          target="_blank"
         >
           View on Github
         </Button>
