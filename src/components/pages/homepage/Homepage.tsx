@@ -1,6 +1,4 @@
 import { Box, Divider } from "@mui/material";
-import { useContext } from "react";
-import { ThemeModeContext } from "../../../context/ThemeModeContext";
 import { useTheme } from "@emotion/react";
 import { Hero } from "./Hero";
 import { FeaturesSection } from "./FeaturesSection";
@@ -9,7 +7,6 @@ import { TestimonialSection } from "./TestimonialSection";
 import { ContactSection } from "./ContactSection";
 
 export const Homepage = () => {
-  const { toggleThemeMode } = useContext(ThemeModeContext);
   const theme = useTheme();
 
   const handleClick = (anchor: "contactme") => {
@@ -24,7 +21,7 @@ export const Homepage = () => {
   };
 
   return (
-    <Box onClick={() => toggleThemeMode()}>
+    <Box>
       {/*Hero*/}
 
       <Box
