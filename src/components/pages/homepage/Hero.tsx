@@ -1,7 +1,11 @@
 import { Typography, useTheme } from "@mui/material";
 import { Box, Button } from "@mui/material";
 
-export const Hero = () => {
+export const Hero = ({
+  onGetStartedClick,
+}: {
+  onGetStartedClick: () => void;
+}) => {
   const theme = useTheme();
   return (
     <Box
@@ -47,6 +51,7 @@ export const Hero = () => {
           variant="contained"
           size="large"
           sx={{ px: 4, py: 1.5, letterSpacing: ".1rem", minWidth: "220px" }}
+          onClick={() => onGetStartedClick()}
         >
           Get started
         </Button>

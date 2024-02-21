@@ -7,6 +7,7 @@ export const ContactSection = () => {
 
   return (
     <Box
+      id="contactme-section"
       bgcolor={theme.palette.primary.main}
       sx={{
         display: "flex",
