@@ -20,6 +20,7 @@ export const Navbar = () => {
         <Box
           component={"img"}
           src={LOGO_URL}
+          alt="Logo"
           sx={{
             height: { xs: 120, sm: 70 },
             width: { xs: 120, sm: 70 },

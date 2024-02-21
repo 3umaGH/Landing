@@ -10,8 +10,8 @@ export const Footer = () => {
 
   const socials = useMemo(
     () => [
-      { icon: <InstagramIcon />, url: "#" },
-      { icon: <FacebookIcon />, url: "#" },
+      { ariaLabel: "Instagram Page", icon: <InstagramIcon />, url: "#" },
+      { ariaLabel: "Facebook Page", icon: <FacebookIcon />, url: "#" },
     ],
     []
   );
@@ -47,6 +47,7 @@ export const Footer = () => {
           <Box
             component={"img"}
             src={LOGO_URL}
+            alt="Logo"
             sx={{
               height: 35,
               width: 35,
@@ -62,7 +63,12 @@ export const Footer = () => {
             }}
           >
             {socials.map((social) => (
-              <Link href={social.url} color="inherit">
+              <Link
+                key={social.ariaLabel}
+                href={social.url}
+                color="inherit"
+                aria-label={social.ariaLabel}
+              >
                 {social.icon}
               </Link>
             ))}
@@ -96,7 +102,7 @@ export const Footer = () => {
               }}
             >
               {links.map((link) => (
-                <li>
+                <li key={link.name}>
                   <Link href={link.url} color="inherit" underline="none">
                     {link.name}
                   </Link>

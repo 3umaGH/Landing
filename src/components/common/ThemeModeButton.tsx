@@ -15,6 +15,7 @@ export const ThemeModeButton = ({ currentMode }: ThemeModeButtonProps) => {
       style={{ lineHeight: "0px" }}
       size="large"
       onClick={() => toggleThemeMode()}
+      aria-label="Toggle Theme"
     >
       {currentMode === "light" ? <NightlightIcon /> : <LightModeIcon />}
     </IconButton>

@@ -22,11 +22,16 @@ export const FeatureItem = ({ icon, title, subtext }: FeatureItemType) => {
     >
       <RoundedIcon icon={icon} />
 
-      <Typography variant="h5" sx={{ fontWeight: 600, marginTop: 1 }}>
+      <Typography
+        variant="h5"
+        component={"p"}
+        sx={{ fontWeight: 600, marginTop: 1 }}
+      >
         {title}
       </Typography>
       <Typography
         variant="subtitle1"
+        component={"p"}
         color={theme.palette.subtext.main}
         sx={{ fontWeight: 500 }}
       >

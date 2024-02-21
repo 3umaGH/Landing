@@ -17,7 +17,12 @@ export const Layout = ({ children }: { children: React.ReactNode }) => {
           width: "100%",
         }}
       >
-        <Box component="img" src={CornerSVG} sx={{ opacity: 0.25 }} />
+        <Box
+          component="img"
+          src={CornerSVG}
+          sx={{ opacity: 0.25 }}
+          alt="Decorative Corner"
+        />
       </Box>
 
       <Container
