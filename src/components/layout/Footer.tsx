@@ -64,6 +64,7 @@ export const Footer = () => {
           >
             {socials.map((social) => (
               <Link
+                key={social.ariaLabel}
                 href={social.url}
                 color="inherit"
                 aria-label={social.ariaLabel}
@@ -101,7 +102,7 @@ export const Footer = () => {
               }}
             >
               {links.map((link) => (
-                <li>
+                <li key={link.name}>
                   <Link href={link.url} color="inherit" underline="none">
                     {link.name}
                   </Link>
