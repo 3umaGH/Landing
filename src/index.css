@@ -1,5 +1,15 @@
 * {
   transition:
     background-color 300ms linear,
+    opacity 300ms,
     color 10ms ease;
+}
+
+ul#footer-menu li {
+  display: inline;
+}
+
+li {
+  margin-left: 5px;
+  margin-right: 5px;
 }

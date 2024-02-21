@@ -13,6 +13,8 @@ declare module "@mui/material/Button" {
 
 declare module "@mui/material/styles" {
   interface Palette {
-    subtext: string;
+    subtext: {
+      main: string;
+    };
   }
 }

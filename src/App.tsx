@@ -2,8 +2,8 @@ import { CssBaseline, ThemeProvider } from "@mui/material";
 import { ThemeModeContext } from "./context/ThemeModeContext";
 import { createTheme } from "@mui/material";
 import { useMemo, useState } from "react";
-import { Homepage } from "./components/Homepage";
-import { Layout } from "./components/Layout";
+import { Homepage } from "./components/pages/homepage/Homepage";
+import { Layout } from "./components/layout/Layout";
 
 import "@fontsource/roboto/300.css";
 import "@fontsource/roboto/400.css";
@@ -23,29 +23,31 @@ function App() {
         palette: {
           mode,
 
+          primary: {
+            main: "#5558DD",
+          },
+
           ...((mode as string) === "light"
             ? {
-                primary: {
-                  main: "#008cd6",
-                },
-
                 background: {
                   default: "#f0f0f0",
                 },
                 subtext: {
                   main: "#2E3134",
                 },
+                secondary: {
+                  main: "#424242",
+                },
               }
             : {
-                primary: {
-                  main: "#167FE1",
-                },
-
                 background: {
-                  default: "#151719",
+                  default: "#111313",
                 },
                 subtext: {
                   main: "#8e959c",
+                },
+                secondary: {
+                  main: "#f0f0f0",
                 },
               }),
         },

@@ -1,7 +1,8 @@
 import React from "react";
 import { Navbar } from "./Navbar";
 import { Box, Container, useTheme } from "@mui/material";
-import CornerSVG from "../assets/corner.svg";
+import CornerSVG from "../../assets/corner.svg";
+import { Footer } from "./Footer";
 
 export const Layout = ({ children }: { children: React.ReactNode }) => {
   const theme = useTheme();
@@ -20,16 +21,23 @@ export const Layout = ({ children }: { children: React.ReactNode }) => {
       </Box>
 
       <Container
-        maxWidth={false}
+        maxWidth={"xl"}
         disableGutters
-        sx={{ px: theme.spacing(8), py: theme.spacing(2) }}
+        sx={{ px: theme.spacing(2), py: theme.spacing(4) }}
       >
         <header>
           <Navbar />
         </header>
-        <Container maxWidth={false} sx={{ py: theme.spacing(16) }}>
+
+        <Container
+          maxWidth={false}
+          disableGutters
+          sx={{ py: theme.spacing(16) }}
+        >
           {children}
         </Container>
+
+        <Footer />
       </Container>
     </>
   );
