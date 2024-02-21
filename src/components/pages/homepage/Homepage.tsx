@@ -42,7 +42,6 @@ export const Homepage = () => {
           sx={{
             width: "100%",
             height: "auto",
-            maxHeight: "700px",
             maxWidth: "1200px",
             filter: theme.palette.mode === "light" ? "" : "brightness(0.85)",
             borderRadius: "10px",
