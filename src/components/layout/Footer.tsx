@@ -1,10 +1,29 @@
 import { useTheme } from "@emotion/react";
-import { Box, Typography } from "@mui/material";
+import { Box, Link, Typography } from "@mui/material";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import FacebookIcon from "@mui/icons-material/Facebook";
+import { useMemo } from "react";
 
 export const Footer = () => {
   const theme = useTheme();
+
+  const socials = useMemo(
+    () => [
+      { icon: <InstagramIcon />, url: "#" },
+      { icon: <FacebookIcon />, url: "#" },
+    ],
+    []
+  );
+
+  const links = useMemo(
+    () => [
+      { name: "Contact", url: "#contact" },
+      { name: "About us", url: "#about-us" },
+      { name: "FAQ's", url: "#faq" },
+    ],
+    []
+  );
+
   return (
     <footer>
       <Box
@@ -41,8 +60,11 @@ export const Footer = () => {
               color: theme.palette.primary.dark,
             }}
           >
-            <InstagramIcon />
-            <FacebookIcon />
+            {socials.map((social) => (
+              <Link href={social.url} color="inherit">
+                {social.icon}
+              </Link>
+            ))}
           </Box>
         </Box>
 
@@ -72,9 +94,13 @@ export const Footer = () => {
                 color: theme.palette.subtext.main,
               }}
             >
-              <li>Contact</li>
-              <li>About us</li>
-              <li>FAQ's</li>
+              {links.map((link) => (
+                <li>
+                  <Link href={link.url} color="inherit" underline="none">
+                    {link.name}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </Box>
         </Box>
