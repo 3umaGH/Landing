@@ -13,3 +13,12 @@ li {
   margin-left: 5px;
   margin-right: 5px;
 }
+
+a,li {
+  transition: color 300ms ease-in-out;
+}
+
+li:hover,
+a:hover {
+  color: #757d85;
+}
