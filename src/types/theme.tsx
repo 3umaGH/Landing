@@ -7,13 +7,12 @@ declare module "@emotion/react" {
 declare module "@mui/material/Button" {
   interface ButtonPropsColorOverrides {
     background: true;
+    subtext: true;
   }
 }
 
 declare module "@mui/material/styles" {
   interface Palette {
-    subtext: {
-      dark: string;
-    };
+    subtext: string;
   }
 }

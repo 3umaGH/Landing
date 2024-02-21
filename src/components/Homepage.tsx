@@ -28,7 +28,7 @@ export const Homepage = () => {
             maxWidth: "1024px",
             typography: "subtitle1",
             fontSize: "2rem",
-            color: theme.palette.subtext.dark,
+            color: theme.palette.subtext,
           }}
         >
           My landing page template works on all devices, so you only have to set
@@ -47,6 +47,7 @@ export const Homepage = () => {
             size="large"
             variant="outlined"
             sx={{ px: 4, py: 1.5, letterSpacing: ".1rem" }}
+            color="subtext"
           >
             View on Github
           </Button>

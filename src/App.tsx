@@ -33,7 +33,7 @@ function App() {
                   default: "#f0f0f0",
                 },
                 subtext: {
-                  dark: "#2E3134",
+                  main: "#2E3134",
                 },
               }
             : {
@@ -45,7 +45,7 @@ function App() {
                   default: "#151719",
                 },
                 subtext: {
-                  dark: "#8e959c",
+                  main: "#8e959c",
                 },
               }),
         },
