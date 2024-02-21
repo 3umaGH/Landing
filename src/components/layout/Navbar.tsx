@@ -9,15 +9,18 @@ export const Navbar = () => {
       <Box
         sx={{
           display: "flex",
+          flexDirection: { xs: "column", sm: "row" },
           justifyContent: "space-between",
+          alignItems: { xs: "center", sm: "start" },
+          gap: 4,
         }}
       >
         <Box
           component={"img"}
           src="https://cdn.worldvectorlogo.com/logos/blue-1.svg"
           sx={{
-            height: { xs: 50, md: 70 },
-            width: { xs: 50, md: 70 },
+            height: { xs: 120, sm: 70 },
+            width: { xs: 120, sm: 70 },
           }}
         />
 
