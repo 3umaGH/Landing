@@ -12,6 +12,17 @@ export const Homepage = () => {
   const { toggleThemeMode } = useContext(ThemeModeContext);
   const theme = useTheme();
 
+  const handleClick = (anchor: "contactme") => {
+    const id = `${anchor}-section`;
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({
+        behavior: "smooth",
+        block: "center",
+      });
+    }
+  };
+
   return (
     <Box onClick={() => toggleThemeMode()}>
       {/*Hero*/}
@@ -25,7 +36,7 @@ export const Homepage = () => {
           textAlign: "center",
         }}
       >
-        <Hero />
+        <Hero onGetStartedClick={() => handleClick("contactme")} />
 
         <Box
           component={"img"}
