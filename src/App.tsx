@@ -24,7 +24,7 @@ function App() {
           mode,
 
           primary: {
-            main: "#5558DD",
+            main: "#167FE1",
           },
 
           ...((mode as string) === "light"
