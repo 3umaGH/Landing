@@ -37,3 +37,12 @@ li:hover,
 a:hover {
   color: #757d85;
 }
+
+.carousel-control{
+  transition: transform 0.2s ease-in-out;
+}
+
+
+.carousel-control:hover{
+  transform: scale(1.2);
+}

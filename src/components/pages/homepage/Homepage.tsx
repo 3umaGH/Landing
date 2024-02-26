@@ -5,6 +5,9 @@ import { FeaturesSection } from "./FeaturesSection";
 import { TextSection } from "./TextSection";
 import { TestimonialSection } from "./TestimonialSection";
 import { ContactSection } from "./ContactSection";
+import { Carousel } from "./Carousel";
+
+import { ArrowForwardIos, ArrowBackIos } from "@mui/icons-material";
 
 export const Homepage = () => {
   const theme = useTheme();
@@ -35,18 +38,37 @@ export const Homepage = () => {
       >
         <Hero onGetStartedClick={() => handleClick("contactme")} />
 
-        <Box
-          component={"img"}
-          src="https://i.gyazo.com/a88cca4db086478cbf3a74d81c785942.jpg"
-          alt="Office Enviroment"
-          sx={{
-            width: "100%",
-            height: "auto",
-            maxWidth: "1200px",
-            filter: theme.palette.mode === "light" ? "" : "brightness(0.85)",
-            borderRadius: "10px",
-            opacity: theme.palette.mode === "light" ? 1 : 0.5,
-          }}
+        <Carousel
+          maxWidth={1200}
+          borderRadius={18}
+          slideInterval={5000}
+          nextButton={<ArrowForwardIos style={{ color: "white" }} />}
+          previousButton={<ArrowBackIos style={{ color: "white" }} />}
+          showTitle={true}
+          showControls={true}
+          titleStyles={{ color: "rgba(255,255,255,0.8)" }}
+          slides={[
+            {
+              title: "Brainstorming",
+              src: "https://i.imgur.com/zSAaKVd.jpeg",
+            },
+            {
+              title: "Discussion",
+              src: "https://i.imgur.com/dzV06Zj.jpeg",
+            },
+            {
+              title: "Brainstorming",
+              src: "https://i.imgur.com/RedGyWh.jpeg",
+            },
+            {
+              title: "Coding",
+              src: "https://i.imgur.com/khiksgO.jpeg",
+            },
+            {
+              title: "Office Enviroment",
+              src: "https://i.imgur.com/AMXutAR.jpeg",
+            },
+          ]}
         />
 
         <TextSection
